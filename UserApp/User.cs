@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace UserApp
+{
+    public class User
+    {
+        public string Name { get; set; }
+        public int Age { get; set; }
+
+        public User(string name, int age)
+        {
+            Name = name;
+            Age = age;
+        }
+        
+        public string GenerateGreeting()
+        {
+            return $"Привет, {Name}. Тебе {Age} лет.";
+        }
+        public string IsAdult()
+        {
+            if (Age >= 18)
+                return "Совершенолетний";
+            else
+                return "Маленький еще";
+        }
+    }
+}
